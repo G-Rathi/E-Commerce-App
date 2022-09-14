@@ -4,8 +4,6 @@ import { mobile, bmobile, tablet } from "../Responsive";
 import { Link } from 'react-router-dom';
 
 
-
-
 const Container = styled.div`
         display:flex;
         background-color: black;
@@ -152,7 +150,7 @@ const Footer = () => {
                                 </SocialContainer>
                                 <CopyRight>
                                         <hr style={{ width: "70%", marginTop: "50px" }} />
-                                        Copyright &#169; 2022 E-Comm, All Rights Reserved.
+                                        Copyright &#169; 2022 gecom.online, All Rights Reserved.
                                 </CopyRight>
                         </Left>
 
@@ -181,14 +179,14 @@ const Footer = () => {
 
                                 <ContactItem><i class="fa-solid fa-phone" style={{ marginRight: "10px" }} />+91-9851******</ContactItem>
 
-                                <ContactItem><i class="fa-regular fa-envelope" style={{ marginRight: "10px" }} />contact@ecomm.tech</ContactItem>
+                                <ContactItem><i class="fa-regular fa-envelope" style={{ marginRight: "10px" }} />contact@gecom.online</ContactItem>
 
                                 <Payment src="https://www.transparentpng.com/thumb/payment-method/WNusu8-payment-method-kinds-transparent-picture.png" />
                         </Right>
 
                         <CopyRightEnd>
                                 <hr style={{ width: "70%", margin: 'auto' }} />
-                                Copyright &#169; 2022 E-Comm, All Rights Reserved.
+                                Copyright &#169; 2022 gecom.online, All Rights Reserved.
                         </CopyRightEnd>
 
 

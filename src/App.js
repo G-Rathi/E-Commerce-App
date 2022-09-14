@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import Routers from './Routers';
 
 
@@ -8,9 +8,9 @@ function App() {
 
   return (
     <div>
-      <BrowserRouter>
+      <HashRouter >
         <Routers />
-      </BrowserRouter>
+      </HashRouter>
 
     </div>
   );
