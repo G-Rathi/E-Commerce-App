@@ -4,6 +4,8 @@ import { mobile, bmobile, tablet } from "../Responsive";
 import { Link } from 'react-router-dom';
 
 
+
+
 const Container = styled.div`
         display:flex;
         background-color: black;
@@ -12,28 +14,22 @@ const Container = styled.div`
         ${bmobile({ flexDirection: "column" })}
         ${tablet({ flexDirection: "column" })}
         `;
-
-
 const Left = styled.div`
         flex:1;
         display:flex;
         flex-direction: column;
         padding: 20px;
         `;
-
 const Logo = styled.h1``;
-
 const Desc = styled.p`
                 margin: 20px 0px;
                 `;
-
 const SocialContainer = styled.div`
                 display:flex;
                 ${mobile({ justifyContent: "center" })};
                 ${bmobile({ justifyContent: "center" })};
                 ${tablet({ justifyContent: "center" })};
                 `;
-
 const SocialIcon = styled.div`
                 width: 40px;
                 height: 40px;
@@ -46,13 +42,10 @@ const SocialIcon = styled.div`
                 margin-right: 20px;
                 transition: all 0.5s ease;
                 cursor: pointer;
-
-
                 &:hover{
                         transform: scale(1.5);
                 }
                 `;
-
 const CopyRight = styled.div`
                 display: flex;
                 flex-direction: column;
@@ -61,18 +54,14 @@ const CopyRight = styled.div`
                 ${bmobile({ display: "none" })};
                 ${tablet({ display: "none" })};
                 `;
-
-
 const Center = styled.div`
         flex:1;
         padding: 20px;
         /* ${mobile({ display: "none" })}; */
         `;
-
 const Title = styled.h3`
                 margin-bottom: 30px;
                 `;
-
 const List = styled.ul`
                 margin:0;
                 padding: 0;
@@ -80,38 +69,30 @@ const List = styled.ul`
                 display: flex;
                 flex-wrap: wrap;
                 `;
-
 const ListItem = styled.li`
                 cursor:pointer;
                 width: 50%;
                 margin-bottom: 10px;
                 transition: all 0.5s ease;
-
-
                 &:hover{
                         transform: scale(1.1)
                 }
                 `;
-
-
 const Right = styled.div`
         flex:1;
         padding: 20px;
         `;
-
 const ContactItem = styled.div`
                 display: flex;
                 align-items: center;
                 margin-bottom: 20px;
                 `;
-
 const Payment = styled.img`
                 /* width: 50%; */
                 ${mobile({ width: "70%" })}
                 ${bmobile({ width: "70%" })}
                 ${tablet({ width: "70%" })}
                 `;
-
 const CopyRightEnd = styled.div`
         display:flex;
         flex-direction: column;
@@ -153,8 +134,6 @@ const Footer = () => {
                                         Copyright &#169; 2022 gecom.online, All Rights Reserved.
                                 </CopyRight>
                         </Left>
-
-
                         <Center>
                                 <Title>Useful Links</Title>
                                 <List>
@@ -170,26 +149,17 @@ const Footer = () => {
                                         <ListItem>Blogs</ListItem>
                                 </List>
                         </Center>
-
-
                         <Right>
                                 <Title>Contact</Title>
-
                                 <ContactItem><i class="fa-solid fa-location-dot" style={{ marginRight: "10px" }} />310 Welcome, Faridabad, Haryana 123456</ContactItem>
-
                                 <ContactItem><i class="fa-solid fa-phone" style={{ marginRight: "10px" }} />+91-9851******</ContactItem>
-
                                 <ContactItem><i class="fa-regular fa-envelope" style={{ marginRight: "10px" }} />contact@gecom.online</ContactItem>
-
                                 <Payment src="https://www.transparentpng.com/thumb/payment-method/WNusu8-payment-method-kinds-transparent-picture.png" />
                         </Right>
-
                         <CopyRightEnd>
                                 <hr style={{ width: "70%", margin: 'auto' }} />
                                 Copyright &#169; 2022 gecom.online, All Rights Reserved.
                         </CopyRightEnd>
-
-
                 </Container>
         )
 }

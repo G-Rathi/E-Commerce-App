@@ -58,7 +58,6 @@ const Button = styled.button`
         font-size: 20px;
         font-weight: bold;
         transition: all 0.5s;
-
         &:hover{
             color:grey;
         }
@@ -66,9 +65,7 @@ const Button = styled.button`
 
 
 const NewsLetter = () => {
-
         const [inputVal, setInputVal] = useState('');
-
 
         function getValue(val) {
                 setInputVal(val);
@@ -79,17 +76,14 @@ const NewsLetter = () => {
                 (inputVal.match('@')) ? (alert('Thanks for reaching out! You will get latest Updates of your Favourite Product on your email soon.')) : ((inputVal === '') ? (alert('Please enter your email address!')) : (alert('Please enter your valid email address !')));
         }
 
-
         return (
                 <Container>
-
                         <Title>Newsletter</Title>
                         <Desc>Get timely updates from your favourite products.</Desc>
                         <InputContainer>
                                 <Input placeholder="Your email" onChange={(e) => getValue(e.target.value)} />
                                 <Button onClick={(e) => submitEmail(e)}>Send</Button>
                         </InputContainer>
-
                 </Container>
         )
 }

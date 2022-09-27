@@ -4,9 +4,10 @@ import { sliderItems } from '../Data';
 import { bmobile, mobile, tablet } from '../Responsive'
 import { Link } from 'react-router-dom'
 
+
 const Container = styled.div`
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     position: relative;
     overflow: hidden;
@@ -36,12 +37,11 @@ const Arrow = styled.div`
             background-color: #c5bebe;
         }
         `;
-
 const Wrapper = styled.div`
     height: 100%;
     display: flex;
     transform: translateX(${(props) => props.slideIndex * -100}vw);
-    transition: all 1.5s ease;
+    transition: all 1s ease;
     `;
 const Slide = styled.div`
         display: flex;
@@ -62,8 +62,6 @@ const InfoContainer = styled.div`
         flex:1;
         padding: 50px;
         `;
-
-
 const Title = styled.h1`
         font-size: 70px;
         `;
@@ -80,17 +78,16 @@ const Button = styled.button`
         background-color: transparent;
         cursor: pointer;
         transition:all 0.5s ease;
-
         &:hover{
             transform:scale(1.5);
         }
         `;
 
+
 const Slider = () => {
     const [slideIndex, setSlideIndex] = useState(0);
 
     const handleClick = (direction) => {
-
         if (direction === 'left') {
             setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2)
         } else {
@@ -98,14 +95,12 @@ const Slider = () => {
         }
     }
     return (
-
         <Container>
             <Arrow direction='left' onClick={() => handleClick('left')}>
                 <i class="fa-solid fa-caret-left" />
             </Arrow>
             <Wrapper slideIndex={slideIndex}>
                 {sliderItems.map(item => (
-
                     <Slide bg={item.bg} key={item.id}>
                         <ImageConatiner>
                             <Image src={item.img} />
@@ -117,13 +112,11 @@ const Slider = () => {
                         </InfoContainer>
                     </Slide>
                 ))}
-
             </Wrapper>
             <Arrow direction='right' onClick={() => handleClick('right')}>
                 <i class="fa-solid fa-caret-right" />
             </Arrow>
         </Container>
-
     )
 }
 

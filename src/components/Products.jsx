@@ -14,8 +14,8 @@ const Container = styled.div`
         ${bmobile({ justifyContent: "center", alignItems: 'center' })}
         `;
 
-const Products = ({ cat, filters, sort }) => {
 
+const Products = ({ cat, filters, sort }) => {
   const [productData, setProductData] = useState([]);
 
 
@@ -30,8 +30,7 @@ const Products = ({ cat, filters, sort }) => {
       })
   }, [])
 
-
-  console.log(productData);
+  // console.log(productData);
 
   return (
     <Container>

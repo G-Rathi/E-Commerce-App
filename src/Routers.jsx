@@ -16,8 +16,8 @@ function Routers() {
       <Route exact path="/" element={<Home />} />
       <Route exact path="/*" element={<PageNotFound />} />
       <Route path="/products" element={<ProductList />} />
-      <Route path="/products/:category" element={<ProductList />} />
-      <Route path="/product/:id" element={<ProductSingle />} />
+      {/* <Route path="/products/:category" element={<ProductList />} /> */}
+      <Route path="/products/:id" element={<ProductSingle />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />

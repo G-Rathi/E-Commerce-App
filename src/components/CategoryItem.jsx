@@ -36,16 +36,17 @@ const Button = styled.button`
         font-weight: 600;
         cursor: pointer;
         transition: all 0.5s ease;
-
         &:hover{
                 transform: scale(1.5)
         }
         `;
 
+
 const CategoryItem = ({ item }) => {
         return (
                 <Container>
-                        <Link to={`/products/${item.cat}`}>
+                        {/*<Link to={`/products/${item.cat}`}> */}
+                        <Link to='/products' >
                                 <Image src={item.img} />
                                 <Info>
                                         <Title>{item.title}</Title>
