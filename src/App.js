@@ -11,7 +11,6 @@ function App() {
       <HashRouter >
         <Routers />
       </HashRouter>
-
     </div>
   );
 }

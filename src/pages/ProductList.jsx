@@ -88,7 +88,6 @@ const ProductList = () => {
             <Option>XXL</Option>
           </Select>
         </Filter>
-
         <Filter>
           <FilterText>Sort Products:</FilterText>
           <Select name="sort" onChange={handleSort}>

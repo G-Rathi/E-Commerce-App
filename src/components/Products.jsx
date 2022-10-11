@@ -15,19 +15,34 @@ const Container = styled.div`
         `;
 
 
-const Products = ({ cat, filters, sort }) => {
+const Products = () => {
   const [productData, setProductData] = useState([]);
 
+  // const getData = () => {
+  //   axios.get('https://fakestoreapi.com/products')
+  //     .then((res) => {
+  //       console.log(res)
+  //       setProductData(res.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err)
+  //     })
+  // }
+
+  const getData = async () => {
+    try {
+      let fetchingData = await axios.get('https://fakestoreapi.com/products')
+      let response = await fetchingData.data
+      setProductData(response)
+    }
+    catch (error) {
+      console.log(error.message)
+    }
+
+  }
 
   useEffect(() => {
-    axios.get('https://fakestoreapi.com/products')
-      .then((res) => {
-        console.log(res)
-        setProductData(res.data);
-      })
-      .catch((err) => {
-        console.log(err)
-      })
+    getData()
   }, [])
 
   // console.log(productData);

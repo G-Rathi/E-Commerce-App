@@ -33,11 +33,7 @@ const InputContainer = styled.div`
         height: 40px;
         background-color: white;
         display: flex;
-        /* justify-content: space-between; */
         border: 1px solid lightgrey;
-        /* ${mobile({ width: "70%", })}
-        ${bmobile({ width: "70%" })}
-        ${tablet({ width: "70%" })} */
         `;
 
 const Input = styled.input`
